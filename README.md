@@ -1,124 +1,62 @@
-**Ex No: 01     Design & Implementation of CMOS Inverter Design Using Cadence EDA Tools**
+# Ex No: 01 - Design & Implementation of CMOS Inverter Design Using Cadence EDA Tools
+
+## Aim
+The aim is to create and simulate a CMOS inverter circuit with Cadence EDA tools, assess its key electrical properties, and explore foundational CMOS principles, including the design workflow and simulation approaches.
+
+## Tools Required
+
+### Cadence EDA Suite
+- **Virtuoso Schematic Editor** (for circuit design)  
+- **Spectre Simulator** (for circuit simulation)  
+
+### Process Design Kit (PDK)
+- CMOS technology library (e.g., 180nm, 45nm node)  
+
+### Computer System
+- Minimum **4GB RAM** and a **multi-core processor**
+
+## Procedure:
+### 1. Launch Cadence Virtuoso Environment:
+     Open the Cadence Virtuoso tool and set up the working library.
+     Create a new schematic cell view for the CMOS Inverter design.
+### 2. Schematic Design:
+    Select the NMOS and PMOS transistors from the library.
+    Connect the NMOS transistor with its source terminal to GND and its drain terminal to the output node.
+    Connect the PMOS transistor with its source terminal to VDD and its drain terminal to the same output node as NMOS.
+    Join the gate terminals of both transistors to form the input node.
+    Connect input voltage sources Vdc and Vpulse
+### 3. Simulation:
+    Check the Design for Errors and proceed for Simulation
+    Launch the Analog Design Environment (ADE).
+    Configure transient analysis for time-domain response.
+    Set the simulation parameters such as voltage sweep range and step size.
+    Use Spectre simulator to perform transient and DC analyses.
+### 4. Waveform Analysis:
+    Observe the output voltage waveform concerning the input voltage.
+
+## Circuit Diagram:
+#### 1. Schematic of CMOS Inverter:
+
+![image](https://github.com/user-attachments/assets/4d006fa3-bf66-4b69-b314-ff0c102d19ce)
+
+#### 2. Transient Response Setup:
+
+![image](https://github.com/user-attachments/assets/07823e7b-b03d-4291-8fdf-73d76481e0fa)
+
+#### 3. Voltage Transfer Characteristic (VTC)  Setup:
+
+   ![image](https://github.com/user-attachments/assets/012b773b-37d4-4b93-b5c7-5a163d3e4fdf)
 
 
-**Aim:**
+## Output
+#### 1.Transient Analysis Output
 
-To design and implement a CMOS inverter circuit using Cadence EDA tools, analyse its electrical characteristics, and understand the fundamental principles of CMOS technology, including the design process, layout, and simulation techniques.
+![image](https://github.com/user-attachments/assets/b437da5b-7ce8-4bc8-8179-f04855ea10fc)
 
-**Tools Required:**
-
-•	Personal Computer
-•	Cadence Virtuoso Software
-
-**S C H E M A T I C S I M U L A T I O N - PROCEDURE FOR CREATING THE SCHEMATIC SIMULATION -Commands to get into Cadence**
-
-
-1.	Right Click and open the terminal window
-2.	Type the following commands as follows and press enter.
-3.	csh
-4.	source /cadence/install/cshrc
-5.	virtuoso
-
-**Procedure for Schematic simulation using Cadence**
-
-1.	Now two windows must open i) virtuoso/command interpreter window ii)”Whats New…”
-2.	Close the 2nd window
-3.	Use 1st window i.e virtuoso window (CIW) for further processing.
-4.	Create a New Library
-5.	Create Schematic Cell view.
-6.	Create the Symbol for schematic Cell view.
-7.	Create the test Cell view.
-8.	Analog simulation by spectre
-
-
-
-**i)	Procedure for Creating New Library.**
-
-•	File –New – Library
-
-•	Name: Give name for ur library Ex: VLSILAB_EXP_1
-
-•	Enable Attach to an existing technology library, Click OK
-
-•	Attach the library to the technology library gpdk045.Click OK
-
-**ii)	Create Schematic Cell view.**
-
-•	Go to 1st window i.e virtuoso (CIW)
-
-•	File-New-Cell view
-
-•	Setup the new file form
-
-	Library: Select the one you created.
-
-	Cell: Give the experiment name Ex: Inverter ViewSchematic
-
-	Type: Schematic press OK
-
-•	Add the required components from the libraries and make the connections.
-
-	Go to instance fixed menu or use shortcut key “I” from keypad to go instances
-
-	Click on browse. This opens the library browser
-
-	Now select the appropriate library for components like 
-
-	Gpdk45 ------------------------nmos1v, pmos1v
-
-	Create Input and Output pins
-
-	Make the connections by using fixed narrow wire key
-
-	Click Check and Save button
-
-![WhatsApp Image 2025-02-28 at 14 38 30_a3eb5b84](https://github.com/user-attachments/assets/134bf956-090c-4178-ba02-7d0a98cf985b)
-
-
-**iii)Analog simulation by SPECTRE.**
-
-•	In test cell view window
-
-•	Launch – ADE L(Analog Design Environment)
-
-	Execute Setup—Simulation/directory/Host A new window opens
-
-	Set the simulation window to spectre and click ok
-
-	Execute Analysis – Choose. A window opens.
-
-	Select the type and set the specifications and press OK
-
-	Execute Output s—to be plotted – Select on Schematic
-
-	Then Select the INPUT WIRE(Vin ) and OUTPUT WIRE(Vout) from your test Schematic using mouse
-
-•	Execute Simulation -- Net list and Run
-
-![image](https://github.com/user-attachments/assets/e9a0029e-bfeb-41b2-ac7e-c2ea76209c1d)
-
-**For Transient Analysis Settings and Output**
- 
- 
-![image](https://github.com/user-attachments/assets/9cda7755-7b8d-410b-8603-dfd4931f6c29)
-
-![image](https://github.com/user-attachments/assets/9c950859-0aa3-4d1d-a109-cde290ee57fa)
-
-
-
- 
-
-
-
-
- 
-
-**Results:**
+## Results:
 
 1.	Successfully designed the CMOS inverter schematic using Cadence EDA tools.
-   
 2.	The simulation results demonstrated the correct logic operation of the inverter, where the output voltage switches between high (Vdd) and low (0V) levels, corresponding to the input voltage transitions.
-   
 3.	The Voltage Transfer Characteristic (VTC) curve was plotted, showing the relationship between input and output voltages.
 
 
